@@ -8,5 +8,6 @@ console.log("Router Loaded in route folder");
 
 router.get('/', homeController.home);
 
+router.use('/users', require('./users'));
 
 module.exports = router;

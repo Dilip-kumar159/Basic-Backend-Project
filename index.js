@@ -20,8 +20,8 @@ const MongoStore = mongoSessionStore(session);
 const sassMiddleware = require('node-sass-middleware');
 
 app.use(sassMiddleware({
-    src: '/assets/scss',
-    dest: '/assets/css',
+    src: './assets/scss',
+    dest: './assets/css',
     debug: true,
     outputStyle: 'extended',
     prefix: '/css'

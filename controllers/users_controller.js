@@ -80,17 +80,23 @@ module.exports.destroySession = function(req, res , next){
     
     // In new version the logout function require a call back function with one more parameter.
     
-   req.logout(function(err){
-    
-    req.flash('success', 'You have Logged out');
+    req.logout();
 
-    if(err) {return next(err); }
-
-    req.flash('success', 'You have Logged out');
-     return res.redirect('/');
-   });
-
-  req.flash('success', 'You have Logged out');
+    req.flash('success', 'Your have Logged out');
 
     return res.redirect('/');
+
+//    req.logout(function(err){
+    
+//     req.flash('success', 'You have Logged out');
+
+//     if(err) {return next(err); }
+
+//     req.flash('success', 'You have Logged out');
+//      return res.redirect('/');
+//    });
+
+//   req.flash('success', 'You have Logged out');
+
+//     return res.redirect('/');
 }
